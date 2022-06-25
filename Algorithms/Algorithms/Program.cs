@@ -8,7 +8,8 @@
             while (flag == "Y" || flag == "y")
             {
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
-                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort");
+                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort" +
+                    "\n5.MergeSort");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -29,6 +30,10 @@
                         BubbleSort bubblesort = new BubbleSort();
                         bubblesort.bubbleSort();
                         break;
+                    case 5:
+                        MergeSort mergesort = new MergeSort();
+                        mergesort.mergeSort();
+                        break;
                     default:
                         Console.WriteLine("-------Enter the valid option---");
                         break;
@@ -41,31 +46,27 @@
     }
 }
 
-//UC-4
-//4.Bubble Sort
-//a.Desc -> Reads in integers prints them in sorted order using Bubble Sort
-//b.I / P->read in the list ints
-//c. O/P -> Print the Sorted List
-//Results
+//UC_5
+//5.Merge Sort - Write a program to do Merge Sort of list of Strings.
+//a. Logic -> To Merge Sort an array, we divide it into two halves, sort the two halves
+//independently, and then merge the results to sort the full array. To sort a[lo, hi),
+//we use the following recursive strategy:
+//b.Base case: If the subarray length is 0 or 1, it is already sorted.
+//c.Reduction step: Otherwise, compute mid = lo + (hi - lo) / 2, recursively sort the
+//two subarrays a[lo, mid) and a[mid, hi), and merge them to produce a sorted
+//result.
+
+//RESULT
 //Welcome To Datastructures and Algorithms
 //1.Permutation Using Recursion
 //2.BinarySearch
 //3.InsertionSort
 //4.BubbleSort
+//5.MergeSort
 //Enter Your Option
-//4
-//Enter size of array: 5
+//5
+//Array before sorting
+//white  black  blue  green  red  orange  brown  yellow  pink  magenta
 
-//Enter array elements:
-//45
-//67
-//43
-//57
-//24
-
-
-//Array before sorting:
-//45 67 43 57 24
-
-//Array after sorting:
-//24 43 45 57 67
+//Array after sorting
+//black  blue  brown  green  magenta  orange  pink  red  white  yellow
