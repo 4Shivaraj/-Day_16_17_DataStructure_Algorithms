@@ -9,7 +9,8 @@
             {
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
                 Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort" +
-                    "\n5.MergeSort\n6.Anagrams\n7.PrimeNumber\n8.AnagramAndPalindromes\n9.SearchingAndSortingUsingGenerics");
+                    "\n5.MergeSort\n6.Anagrams\n7.PrimeNumber\n8.AnagramAndPalindromes\n9.SearchingAndSortingUsingGenerics" +
+                    "\n10.FindNumber");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -50,6 +51,11 @@
                         SearchingAndSortingUsingGenerics searchingandsortingusinggenerics = new SearchingAndSortingUsingGenerics();
                         searchingandsortingusinggenerics.SearchingAndSorting();
                         break;
+                    case 10:
+                        FindNumber findnumber = new FindNumber();
+                        findnumber.Find();
+                        findnumber.Question(12, 23);
+                        break;
                     default:
                         Console.WriteLine("-------Enter the valid option---");
                         break;
@@ -62,8 +68,15 @@
     }
 }
 
-//UC-9
-//Rewrite Use Generics for Search and Sort Algorithms
+//UC-10
+//10.Question to find your number
+//a. Desc -> takes a command-line argument N, asks you to think of a number
+//between 0 and N-1, where N = 2^n, and always guesses the answer with n
+//questions.
+//b. I/P -> the Number N and then recursively ask true/false if the number is between
+//a high and low value
+//c. Logic -> Use Binary Search to find the number
+//d. O/P -> Print the intermediary number and the final answer
 
 //RESULT
 //Welcome To Datastructures and Algorithms
@@ -76,24 +89,16 @@
 //7.PrimeNumber
 //8.AnagramAndPalindromes
 //9.SearchingAndSortingUsingGenerics
+//10.FindNumber
 //Enter Your Option
-//9
-//Enter size of array: 5
-
-//Enter array elements:
-//56
-//34
-//25
-//76
-//45
-
-//Select an option:
-//1.Bubble Sort
-//2.Binary Search
-//Option:  1
-
-//Array before sorting:
-//56 34 25 76 45
-
-//Array after sorting:
-//25 34 45 56 76
+//10
+//Enter a limit:
+//100
+//Enter a guess between 0 and 1.2676506002282294E+30
+//is this  number 17 is grater than your number ?
+//n
+//is this  number 14 is grater than your number ?
+//n
+//is this  number 13 is grater than your number ?
+//n
+//is this  number 12 is grater than your number ?
