@@ -10,7 +10,7 @@
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
                 Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort" +
                     "\n5.MergeSort\n6.Anagrams\n7.PrimeNumber\n8.AnagramAndPalindromes\n9.SearchingAndSortingUsingGenerics" +
-                    "\n10.FindNumber");
+                    "\n10.FindNumber\n11.TaskDoneByMaximumAmount");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -56,6 +56,10 @@
                         findnumber.Find();
                         findnumber.Question(12, 23);
                         break;
+                    case 11:
+                        TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
+                        taskdonebymaximumamount.tasks();
+                        break;
                     default:
                         Console.WriteLine("-------Enter the valid option---");
                         break;
@@ -68,15 +72,18 @@
     }
 }
 
-//UC-10
-//10.Question to find your number
-//a. Desc -> takes a command-line argument N, asks you to think of a number
-//between 0 and N-1, where N = 2^n, and always guesses the answer with n
-//questions.
-//b. I/P -> the Number N and then recursively ask true/false if the number is between
-//a high and low value
-//c. Logic -> Use Binary Search to find the number
-//d. O/P -> Print the intermediary number and the final answer
+//UC-11
+//11.You have a long list of tasks that you need to do today. To accomplish task you need M
+//minutes, and the deadline for this task is D . You need not complete a task at a stretch.
+//You can complete a part of it, switch to another task, and then switch back.You've
+//realized that it might not be possible to complete all the tasks by their deadline. So you
+//decide to do them in such a manner that the maximum amount by which a task's
+//completion time overshoots its deadline is minimized.
+//Input Format - The first line contains the number of tasks, . Each of the next
+//lines contains two integers, D and M .
+//Output Format - Output T lines. The ith line contains the value of the maximum
+//amount by which a task's completion time overshoots its deadline, when the first
+//tasks on your list are scheduled optimally.
 
 //RESULT
 //Welcome To Datastructures and Algorithms
@@ -90,15 +97,27 @@
 //8.AnagramAndPalindromes
 //9.SearchingAndSortingUsingGenerics
 //10.FindNumber
+//11.TaskDoneByMaximumAmount
 //Enter Your Option
-//10
-//Enter a limit:
-//100
-//Enter a guess between 0 and 1.2676506002282294E+30
-//is this  number 17 is grater than your number ?
-//n
-//is this  number 14 is grater than your number ?
-//n
-//is this  number 13 is grater than your number ?
-//n
-//is this  number 12 is grater than your number ?
+//11
+//Number of Tasks:   3
+
+//Task - 1
+//Deadline: 2
+//Time Taken: 15
+
+//Task - 2
+//Deadline: 3
+//Time Taken: 25
+
+//Task - 3
+//Deadline: 1
+//Time Taken: 10
+
+
+
+//Task - 1 overshoots its deadline 2 by 13
+
+//Task -2 overshoots its deadline 3 by 37
+
+//Task -3 overshoots its deadline 1 by 47
