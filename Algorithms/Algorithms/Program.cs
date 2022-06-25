@@ -8,7 +8,7 @@
             while (flag == "Y" || flag == "y")
             {
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
-                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch");
+                Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -20,6 +20,10 @@
                     case 2:
                         BinarySearchProb binarysearchprob = new BinarySearchProb();
                         binarysearchprob.binarySearch();
+                        break;
+                    case 3:
+                        InsertionSort insertionsort = new InsertionSort();
+                        insertionsort.insertionSort();
                         break;
                     default:
                         Console.WriteLine("-------Enter the valid option---");
@@ -33,27 +37,40 @@
     }
 }
 
-//UC-2
-//2.Binary Search the Word from Word List
-//a. Desc -> Read in a list of words from File. Then prompt the user to enter a word to
-//search the list. The program reports if the search word is found in the list.
-//b. I/P -> read in the list words comma separated from a File and then enter the word to be searched
-//c. Logic -> Use Arrays to sort the word list and then do the binary search
-//d. O/P -> Print the result if the word is found or not
+//UC-3
+//3.Insertion Sorta
+//.Desc -> Reads in strings and prints them in sorted order using insertion sort.
+//b.I / P->read in the list words
+//c. Logic -> Use Insertion Sort to sort the words in the String array
+//d. O/P -> Print the Sorted List
 
 //Results
 //Welcome To Datastructures and Algorithms
 //1.Permutation Using Recursion
 //2.BinarySearch
+//3.InsertionSort
 //Enter Your Option
-//2
-//1. black
-//2. blue
-//3. brown
-//4. green
-//5. magenta
-//6. orange
-//7. pink
-//8. red
-//9. white
-//10. yellow
+//3
+//Array before sorting:
+//white
+//black
+//blue
+//green
+//red
+//orange
+//brown
+//yellow
+//pink
+//magenta
+
+//Array after sorting:
+//black
+//blue
+//brown
+//green
+//magenta
+//orange
+//pink
+//red
+//white
+//yellow
