@@ -9,7 +9,7 @@
             {
                 Console.WriteLine("Welcome To Datastructures and Algorithms");
                 Console.WriteLine("1.Permutation Using Recursion\n2.BinarySearch\n3.InsertionSort\n4.BubbleSort" +
-                    "\n5.MergeSort");
+                    "\n5.MergeSort\n6.Anagrams");
                 Console.WriteLine("Enter Your Option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -34,6 +34,11 @@
                         MergeSort mergesort = new MergeSort();
                         mergesort.mergeSort();
                         break;
+                    case 6:
+                        Anagrams anagrams = new Anagrams();
+                        anagrams.checkAnagrams();
+                        break;
+
                     default:
                         Console.WriteLine("-------Enter the valid option---");
                         break;
@@ -46,15 +51,12 @@
     }
 }
 
-//UC_5
-//5.Merge Sort - Write a program to do Merge Sort of list of Strings.
-//a. Logic -> To Merge Sort an array, we divide it into two halves, sort the two halves
-//independently, and then merge the results to sort the full array. To sort a[lo, hi),
-//we use the following recursive strategy:
-//b.Base case: If the subarray length is 0 or 1, it is already sorted.
-//c.Reduction step: Otherwise, compute mid = lo + (hi - lo) / 2, recursively sort the
-//two subarrays a[lo, mid) and a[mid, hi), and merge them to produce a sorted
-//result.
+//UC_6
+//6.An Anagram Detection Example
+//a. Desc -> One string is an anagram of another if the second is simply a
+//rearrangement of the first. For example, 'heart' and 'earth' are anagrams...
+//b. I/P -> Take 2 Strings as Input such abcd and dcba and Check for Anagrams
+//c. O/P -> The Two Strings are Anagram or not....
 
 //RESULT
 //Welcome To Datastructures and Algorithms
@@ -63,10 +65,11 @@
 //3.InsertionSort
 //4.BubbleSort
 //5.MergeSort
+//6.Anagrams
 //Enter Your Option
-//5
-//Array before sorting
-//white  black  blue  green  red  orange  brown  yellow  pink  magenta
+//6
+//Enter first string:   a gentleman
 
-//Array after sorting
-//black  blue  brown  green  magenta  orange  pink  red  white  yellow
+//Enter second string:   elegant man
+
+//String a gentleman and elegant man are anagram of each other.
