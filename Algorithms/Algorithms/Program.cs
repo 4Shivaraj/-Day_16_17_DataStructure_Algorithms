@@ -54,7 +54,6 @@
                     case 10:
                         FindNumber findnumber = new FindNumber();
                         findnumber.Find();
-                        findnumber.Question(12, 23);
                         break;
                     default:
                         Console.WriteLine("-------Enter the valid option---");
@@ -93,12 +92,16 @@
 //Enter Your Option
 //10
 //Enter a limit:
-//100
-//Enter a guess between 0 and 1.2676506002282294E+30
-//is this  number 17 is grater than your number ?
+//25
+//Enter a guess between 0 and 24
+//Is this Greater than 12?
+//y
+//Is this Greater than 18?
 //n
-//is this  number 14 is grater than your number ?
+//Is this Greater than 15?
 //n
-//is this  number 13 is grater than your number ?
-//n
-//is this  number 12 is grater than your number ?
+//Is this Greater than 13?
+//y
+//Is this Greater than 14?
+//y
+//This is your Number 15
