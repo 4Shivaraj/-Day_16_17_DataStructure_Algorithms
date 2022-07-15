@@ -54,7 +54,6 @@
                     case 10:
                         FindNumber findnumber = new FindNumber();
                         findnumber.Find();
-                        findnumber.Question(12, 23);
                         break;
                     case 11:
                         TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
@@ -105,8 +104,4 @@
 //26-02-2022.
 
 
-////Task - 1 overshoots its deadline 2 by 13
 
-////Task -2 overshoots its deadline 3 by 37
-
-////Task -3 overshoots its deadline 1 by 47
